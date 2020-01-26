@@ -75,7 +75,7 @@
                         <div class="col-lg-4 offset-lg-4">
                             <div class="proceed-checkout">
                                 <ul>
-                                    <li class="subtotal">Subtotal <span>$240.00</span></li>
+                                    <li class="subtotal">Subtotal <span>$ {{ $total }}</span></li>
                                     <li class="cart-total">Total <span>$240.00</span></li>
                                 </ul>
                                 <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>

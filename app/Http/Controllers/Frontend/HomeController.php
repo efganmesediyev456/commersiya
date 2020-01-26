@@ -63,16 +63,14 @@ class HomeController extends Controller
     {
         $all_selected_products=\session()->get('user');
         $all_products=[];
+        $total=0;
         foreach ($all_selected_products as $k=>$s){
             $product=Product::find($k);
             $product['say']=$s;
             $all_products[]=$product;
+            dump($product->price*$s);
         }
-
-
-
-
-        return view('cart', compact('all_products'));
+        return view('cart', compact('all_products', 'total'));
     }
 
     public function save_session_value(Request $request)
